@@ -43,7 +43,7 @@ public class TreasureInventory {
             }
 
             int var2 = this.getBucketIndex(var1.getId());
-            LinkedList var3 = this.storage[var2];
+            LinkedList<Treasure> var3 = this.storage[var2];
 
             for(Treasure var5 : var3) {
                 if (var5.getId() == var1.getId()) {
@@ -60,7 +60,7 @@ public class TreasureInventory {
 
     public Treasure removeTreasure(int var1) {
         int var2 = this.getBucketIndex(var1);
-        LinkedList var3 = this.storage[var2];
+        LinkedList<Treasure> var3 = this.storage[var2];
 
         for(Treasure var5 : var3) {
             if (var5.getId() == var1) {
@@ -95,7 +95,7 @@ public class TreasureInventory {
         System.out.println();
 
         for(int var1 = 0; var1 < this.maxCapacity; ++var1) {
-            LinkedList var2 = this.storage[var1];
+            LinkedList<Treasure> var2 = this.storage[var1];
             if (!var2.isEmpty()) {
                 System.out.println("Bucket " + var1 + " (" + var2.size() + " items):");
 
@@ -112,7 +112,7 @@ public class TreasureInventory {
 
     private void expandStorage() {
         int var1 = this.maxCapacity;
-        LinkedList[] var2 = this.storage;
+        LinkedList<Treasure>[] var2 = this.storage;
         this.maxCapacity *= 2;
         this.storage = new LinkedList[this.maxCapacity];
 
@@ -121,7 +121,7 @@ public class TreasureInventory {
         }
 
         this.itemCount = 0;
-        LinkedList[] var9 = var2;
+        LinkedList<Treasure>[] var9 = var2;
         int var4 = var2.length;
 
         for(int var5 = 0; var5 < var4; ++var5) {

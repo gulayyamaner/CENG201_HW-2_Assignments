@@ -16,7 +16,7 @@ public class Treasure {
     }
 
     public String getName() {
-        return this.treasureId;
+        return this.treasureName;
     }
 
     public int getValue() {

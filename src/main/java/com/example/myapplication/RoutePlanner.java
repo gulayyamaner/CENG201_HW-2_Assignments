@@ -157,7 +157,7 @@ public class RoutePlanner {
     }
 
     public int getCapacity() {
-        return this.maxCapacity;
+        return this.maxRoutes;
     }
 
     public boolean isEmpty() {
